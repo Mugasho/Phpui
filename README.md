@@ -1,12 +1,12 @@
 # Phpui
 Phpui is a php only Ui framework.
-###What does it do
+## What does it do
 Write your code in pure php and DYnamically generate the Html,Javascript,Css etc
 Add the phpui folder to your project
 Require loader.php in your files to use the framework
 ## How it works
 Create a new html document object
-```
+```php
 
 $htmlDoc=new HtmlDocument('Hello',Lang::$english);
 $htmlDoc->addClass(Classes::$content);
@@ -25,7 +25,7 @@ $body->Start();
 $body->End();
 $htmlDoc->End();
 ```
-### Next steps
+## Next steps
 
 Add other elements like buttons, lists etc. For example adding a button
 
@@ -47,13 +47,13 @@ $div->End();
 ## Add to your project
 
 There are 2 ways you can add SDVersion to your project:
-```
+```php
 require_once('pms-includes/ui/loader.php');
 
 ```
 or include in your project
 
-```
+```php
 include('pms-includes/ui/loader.php');
 ```
 happy Coding
