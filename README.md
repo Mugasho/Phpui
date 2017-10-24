@@ -31,7 +31,6 @@ Add other elements like buttons, lists etc. For example adding a button
 
 ```
 
-//create a button
 $button=new phpUI(typeOf::$button);
 $button->setText('hello');
 $button->setId('btn1');
@@ -46,7 +45,7 @@ $div->End();
 ```
 ## Add to your project
 
-There are 2 ways you can add SDVersion to your project:
+There are 2 ways you can add PhpUI to your project:
 ```php
 require_once('pms-includes/ui/loader.php');
 
