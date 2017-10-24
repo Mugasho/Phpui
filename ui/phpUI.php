@@ -16,6 +16,7 @@ class phpUI
     public $id = '';
     public $typeOf = '';
     public $onClick = '';
+    public $onMouseOver='';
     public $classes = array();
 
     /**
@@ -163,6 +164,22 @@ class phpUI
     public function setOnClick($onClick)
     {
         $this->onClick = $onClick;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOnMouseOver()
+    {
+        return $this->onMouseOver;
+    }
+
+    /**
+     * @param string $onMouseOver
+     */
+    public function setOnMouseOver($onMouseOver)
+    {
+        $this->onMouseOver = $onMouseOver;
     }
 
     /**
