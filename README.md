@@ -1,5 +1,5 @@
 # Phpui
-Phpui is a php only Ui framework.
+Phpui is a php only Ui framework.<br>
 ## What does it do
 Write your code in pure php and DYnamically generate the Html,Javascript,Css etc
 Add the phpui folder to your project
