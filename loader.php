@@ -10,5 +10,6 @@ require_once('ui/Lang.php');
 require_once('ui/Color.php');
 require_once('ui/Tags.php');
 require_once('ui/typeOf.php');
+require_once ('ui/jsFunction.php');
 require_once('ui/HtmlDocument.php');
 require_once('ui/phpUI.php');

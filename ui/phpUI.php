@@ -15,6 +15,7 @@ class phpUI
     public $visibility = '';
     public $id = '';
     public $typeOf = '';
+    public $onClick = '';
     public $classes = array();
 
     /**
@@ -123,6 +124,7 @@ class phpUI
         $this->typeOf = $typeOf;
     }
 
+
     /**
      * @return array
      */
@@ -147,7 +149,21 @@ class phpUI
     {
         $this->classes[] = $class;
     }
+    /**
+     * @return string
+     */
+    public function getOnClick()
+    {
+        return $this->onClick;
+    }
 
+    /**
+     * @param string $onClick
+     */
+    public function setOnClick($onClick)
+    {
+        $this->onClick = $onClick;
+    }
 
     /**
      *Generates a ui element using the given Parameters
