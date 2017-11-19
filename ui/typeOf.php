@@ -3,25 +3,24 @@
  * Created by PhpStorm.
  * User: ScriptFloor
  * Date: 10/22/2017
- * Time: 10:51 AM
+ * Time: 10:51 AM.
  */
-
 class typeOf
 {
-    static $a = 'a';
-    static $body = 'body';
-    static $button = 'button';
-    static $canvas = 'canvas';
-    static $div = 'div';
-    static $listUnordered = 'ul';
-    static $listOrdered = 'ol';
-    static $listDefinition='dl';
-    static $listItem='li';
-    static $nav = 'nav';
-    static $span = 'span';
-    static $title = 'title';
-    static $head = 'head';
-    static $progress='progress';
-    static $footer='footer';
-    static $paragraph='p';
+    public static $a = 'a';
+    public static $body = 'body';
+    public static $button = 'button';
+    public static $canvas = 'canvas';
+    public static $div = 'div';
+    public static $listUnordered = 'ul';
+    public static $listOrdered = 'ol';
+    public static $listDefinition = 'dl';
+    public static $listItem = 'li';
+    public static $nav = 'nav';
+    public static $span = 'span';
+    public static $title = 'title';
+    public static $head = 'head';
+    public static $progress = 'progress';
+    public static $footer = 'footer';
+    public static $paragraph = 'p';
 }

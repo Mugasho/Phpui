@@ -3,10 +3,8 @@
  * Created by PhpStorm.
  * User: ScriptFloor
  * Date: 10/21/2017
- * Time: 4:00 PM
+ * Time: 4:00 PM.
  */
-
-
 class phpUI
 {
     public $text = '';
@@ -16,18 +14,18 @@ class phpUI
     public $id = '';
     public $typeOf = '';
     public $onClick = '';
-    public $onMouseOver='';
-    public $classes = array();
+    public $onMouseOver = '';
+    public $classes = [];
 
     /**
      * phpUI constructor.
+     *
      * @param string $typeOf
      */
     public function __construct($typeOf)
     {
         $this->typeOf = $typeOf;
     }
-
 
     /**
      * @return string
@@ -125,7 +123,6 @@ class phpUI
         $this->typeOf = $typeOf;
     }
 
-
     /**
      * @return array
      */
@@ -150,6 +147,7 @@ class phpUI
     {
         $this->classes[] = $class;
     }
+
     /**
      * @return string
      */
@@ -183,32 +181,42 @@ class phpUI
     }
 
     /**
-     *Generates a ui element using the given Parameters
+     *Generates a ui element using the given Parameters.
      */
     public function Start()
     {
         echo Tags::$newline;
-        echo Tags::$openAngle . $this::getTypeOf();
-        if (!empty($this::getId())) echo ' id="' . $this::getId() . '"';
-        if (!empty($this::getValue())) echo ' value="' . $this::getValue() . '"';
-        if (!empty($this::getVisibility())) echo ' ' . $this::getVisibility();
-        if (!empty($this::getColor())) echo ' color="' . $this::getColor() . '"';
+        echo Tags::$openAngle.$this::getTypeOf();
+        if (!empty($this::getId())) {
+            echo ' id="'.$this::getId().'"';
+        }
+        if (!empty($this::getValue())) {
+            echo ' value="'.$this::getValue().'"';
+        }
+        if (!empty($this::getVisibility())) {
+            echo ' '.$this::getVisibility();
+        }
+        if (!empty($this::getColor())) {
+            echo ' color="'.$this::getColor().'"';
+        }
         if (!empty($this::getClasses())) {
             echo ' class="';
             foreach ($this::getClasses() as $class) {
-                echo $class . ' ';
+                echo $class.' ';
             }
             echo '"';
         }
         echo Tags::$closeAngle;
-        if (!empty($this::getText())) echo $this::getText();
+        if (!empty($this::getText())) {
+            echo $this::getText();
+        }
     }
 
     /**
-     *Close ui element tag
+     *Close ui element tag.
      */
     public function End()
     {
-        echo Tags::$openSlash . $this::getTypeOf() . Tags::$closeAngle;
+        echo Tags::$openSlash.$this::getTypeOf().Tags::$closeAngle;
     }
 }
