@@ -165,13 +165,13 @@ class HtmlDocument
             echo '"';
         }
         echo Tags::$closeAngle;
-        $head = new phpUI(typeOf::$head);
-        $head->Start();
+        $head = new phpUI(TypeOf::$head);
+        $head->start();
         if (!empty($this::getTitle())) {
-            $title = new phpUI(typeOf::$title);
+            $title = new phpUI(TypeOf::$title);
             $title->setText('myTitle');
-            $title->Start();
-            $title->End();
+            $title->start();
+            $title->end();
         }
         if (!empty($this->metaViewport)) {
             echo Tags::$newline;
