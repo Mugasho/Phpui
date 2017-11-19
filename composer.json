@@ -1,6 +1,7 @@
 {
     "name": "mugasho/phpui",
     "description": "php ui framework",
+    "keywords": ["php", "ui", "user interface"],
     "type": "library",
     "license": "GNU",
     "authors": [
@@ -9,6 +10,9 @@
             "email": "mugalink2@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "autoload": {
+        "psr4": {
+            "PhpUi\\": "src/"
+        }
+    }
 }
