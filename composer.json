@@ -1,0 +1,14 @@
+{
+    "name": "mugasho/phpui",
+    "description": "php ui framework",
+    "type": "library",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Mugasho Lincoln",
+            "email": "mugalink2@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
