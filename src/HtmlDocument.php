@@ -1,10 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ScriptFloor
- * Date: 10/21/2017
- * Time: 10:30 PM.
- */
+
+namespace PhpUi;
+
 class HtmlDocument
 {
     public $title = 'document';
@@ -154,7 +151,7 @@ class HtmlDocument
     /**
      *Generates a new Html Document using the given Parameters.
      */
-    public function Start()
+    public function start()
     {
         echo Tags::$openAngle.Tags::$html;
         if (!empty($this::getLang())) {
@@ -205,13 +202,13 @@ class HtmlDocument
                 .Tags::$closeAngle;
         }
         echo Tags::$newline;
-        $head->End();
+        $head->end();
     }
 
     /**
      *Close Html document tag.
      */
-    public static function End()
+    public static function end()
     {
         echo Tags::$newline;
         echo Tags::$openSlash.Tags::$html.Tags::$closeAngle;

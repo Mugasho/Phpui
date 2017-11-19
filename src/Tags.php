@@ -1,10 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ScriptFloor
- * Date: 10/21/2017
- * Time: 11:09 PM.
- */
+
+namespace PhpUi;
+
 class Tags
 {
     public static $openAngle = '<';

@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ScriptFloor
- * Date: 10/21/2017
- * Time: 4:00 PM.
- */
-class phpUI
+
+namespace PhpUi;
+
+class PhpUI
 {
     public $text = '';
     public $value = '';
@@ -183,7 +180,7 @@ class phpUI
     /**
      *Generates a ui element using the given Parameters.
      */
-    public function Start()
+    public function start()
     {
         echo Tags::$newline;
         echo Tags::$openAngle.$this::getTypeOf();
@@ -215,7 +212,7 @@ class phpUI
     /**
      *Close ui element tag.
      */
-    public function End()
+    public function end()
     {
         echo Tags::$openSlash.$this::getTypeOf().Tags::$closeAngle;
     }

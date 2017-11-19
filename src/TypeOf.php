@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ScriptFloor
- * Date: 10/22/2017
- * Time: 10:51 AM.
- */
-class typeOf
+
+namespace PhpUi;
+
+class TypeOf
 {
     public static $a = 'a';
     public static $body = 'body';

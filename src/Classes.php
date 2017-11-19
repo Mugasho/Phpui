@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ScriptFloor
- * Date: 10/19/2017
- * Time: 2:52 PM.
- */
-class classes
+
+namespace PhpUi;
+
+class Classes
 {
     public static $columnsTwo = '2-columns';
     public static $fixedNavbar = 'fixed-navbar';
