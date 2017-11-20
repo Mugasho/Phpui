@@ -2,7 +2,7 @@
 
 namespace PhpUi;
 
-class PhpUI
+class UI
 {
     public $text = '';
     public $value = '';
