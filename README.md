@@ -2,28 +2,34 @@
 Phpui is a php only Ui framework.<br>
 ## What does it do
 Write your code in pure php and DYnamically generate the Html,Javascript,Css etc
-Add the phpui folder to your project
-Require loader.php in your files to use the framework
+
+
+## Installation
+
+```sh
+composer require mugasho/phpui
+```
 ## How it works
+
 Create a new html document object
 ```php
 
-$htmlDoc=new HtmlDocument('Hello',Lang::$english);
+$htmlDoc=new PhpUi\HtmlDocument('Hello',Lang::$english);
 $htmlDoc->addClass(Classes::$content);
 $htmlDoc->setMetaViewport('device-width',1.0,0,'minimal-ui');
 $htmlDoc->setMetaDescription('PhpUi is a php only extensible web framework');
 $htmlDoc->setMetaKeywords('php,ui,phpUI,web,framework');
 $htmlDoc->setMetaAuthor('Script-floor');
 //start printing element
-$htmlDoc->Start();
+$htmlDoc->start();
 //create the body
-$body=new phpUI(typeOf::$body);
+$body=new PhpUi\UI(typeOf::$body);
 //add classes to $body
 $body->addClass(Classes::$containerFluid);
-$body->Start();
+$body->start();
 //close the element with end method
-$body->End();
-$htmlDoc->End();
+$body->end();
+$htmlDoc->end();
 ```
 ## Next steps
 
@@ -31,28 +37,15 @@ Add other elements like buttons, lists etc. For example adding a button
 
 ```
 
-$button=new phpUI(typeOf::$button);
+$button=new PhpUi\UI(typeOf::$button);
 $button->setText('hello');
 $button->setId('btn1');
-$button->Start();
-$button->End();
+$button->start();
+$button->end();
 //create a div
-$div=new phpUI(typeOf::$div);
+$div=new Php\UI(typeOf::$div);
 $div->setId('div1');
-$div->Start();
-$div->End();
+$div->start();
+$div->end();
 
-```
-## Add to your project
-
-There are 2 ways you can add PhpUI to your project:
-```php
-require_once('pms-includes/ui/loader.php');
-
-```
-or include in your project
-
-```php
-include('pms-includes/ui/loader.php');
-```
 happy Coding
