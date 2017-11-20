@@ -165,10 +165,10 @@ class HtmlDocument
             echo '"';
         }
         echo Tags::$closeAngle;
-        $head = new phpUI(TypeOf::$head);
+        $head = new UI(TypeOf::$head);
         $head->start();
         if (!empty($this::getTitle())) {
-            $title = new phpUI(TypeOf::$title);
+            $title = new UI(TypeOf::$title);
             $title->setText('myTitle');
             $title->start();
             $title->end();
