@@ -35,7 +35,7 @@ $htmlDoc->end();
 
 Add other elements like buttons, lists etc. For example adding a button
 
-```
+```php
 
 $button=new PhpUi\UI(typeOf::$button);
 $button->setText('hello');
@@ -47,5 +47,7 @@ $div=new Php\UI(typeOf::$div);
 $div->setId('div1');
 $div->start();
 $div->end();
-
+```
 happy Coding
+
+
