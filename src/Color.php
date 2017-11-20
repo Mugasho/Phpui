@@ -1,19 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ScriptFloor
- * Date: 10/21/2017
- * Time: 5:46 PM
- */
 
-class color
+namespace PhpUi;
+
+class Color
 {
-public static $Red='red';
-public static $Blue='blue';
-public static $Green='green';
+    public static $Red = 'red';
+    public static $Blue = 'blue';
+    public static $Green = 'green';
 
     /**
      * color constructor.
+     *
      * @param string $Red
      * @param string $Blue
      * @param string $Green
@@ -72,5 +69,4 @@ public static $Green='green';
     {
         $this->Green = $Green;
     }
-
 }

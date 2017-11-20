@@ -1,14 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: CORE i3
- * Date: 10/24/2017
- * Time: 2:40 AM
- */
 
-class jsFunction
+namespace PhpUi;
+
+class JsFunction
 {
-public $alert='';
+    public $alert = '';
 
     /**
      * @return string

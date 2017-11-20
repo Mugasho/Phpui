@@ -1,16 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ScriptFloor
- * Date: 10/21/2017
- * Time: 10:30 PM
- */
+
+namespace PhpUi;
 
 class HtmlDocument
 {
     public $title = 'document';
     public $lang = 'eng';
-    public $classes = array();
+    public $classes = [];
     public $metaViewport = '';
     public $metaDescription = '';
     public $metaKeywords = '';
@@ -18,6 +14,7 @@ class HtmlDocument
 
     /**
      * Html constructor.
+     *
      * @param string $title
      * @param string $lang
      */
@@ -67,7 +64,6 @@ class HtmlDocument
         return $this->metaViewport;
     }
 
-
     /**
      * @param $width
      * @param $initialScale
@@ -76,7 +72,7 @@ class HtmlDocument
      */
     public function setMetaViewport($width, $initialScale, $userScalable, $ui)
     {
-        $this->metaViewport = 'width=' . $width . ',initial-scale=' . $initialScale . ',user-scalable=' . $userScalable . ',' . $ui;
+        $this->metaViewport = 'width='.$width.',initial-scale='.$initialScale.',user-scalable='.$userScalable.','.$ui;
     }
 
     /**
@@ -152,69 +148,69 @@ class HtmlDocument
         $this->classes[] = $class;
     }
 
-
     /**
-     *Generates a new Html Document using the given Parameters
+     *Generates a new Html Document using the given Parameters.
      */
-    public function Start()
+    public function start()
     {
-        echo Tags::$openAngle . Tags::$html;
-        if (!empty($this::getLang())) echo ' lang="' . $this::getLang() . '"';
+        echo Tags::$openAngle.Tags::$html;
+        if (!empty($this::getLang())) {
+            echo ' lang="'.$this::getLang().'"';
+        }
         if (!empty($this::getClasses())) {
             echo ' class="';
             foreach ($this::getClasses() as $class) {
-                echo $class . ' ';
+                echo $class.' ';
             }
             echo '"';
         }
         echo Tags::$closeAngle;
-        $head = new phpUI(typeOf::$head);
-        $head->Start();
+        $head = new phpUI(TypeOf::$head);
+        $head->start();
         if (!empty($this::getTitle())) {
-            $title = new phpUI(typeOf::$title);
+            $title = new phpUI(TypeOf::$title);
             $title->setText('myTitle');
-            $title->Start();
-            $title->End();
+            $title->start();
+            $title->end();
         }
         if (!empty($this->metaViewport)) {
             echo Tags::$newline;
             echo Tags::$openAngle
-                . Tags::$meta . ' '
-                . Tags::$name . '="viewport" ' . Tags::$content . '="' . $this::getMetaViewport() . '"'
-                . Tags::$closeAngle;
+                .Tags::$meta.' '
+                .Tags::$name.'="viewport" '.Tags::$content.'="'.$this::getMetaViewport().'"'
+                .Tags::$closeAngle;
         }
         if (!empty($this->metaDescription)) {
             echo Tags::$newline;
             echo Tags::$openAngle
-                . Tags::$meta . ' '
-                . Tags::$name . '="description" ' . Tags::$content . '="' . $this::getMetaDescription() . '"'
-                . Tags::$closeAngle;
+                .Tags::$meta.' '
+                .Tags::$name.'="description" '.Tags::$content.'="'.$this::getMetaDescription().'"'
+                .Tags::$closeAngle;
         }
         if (!empty($this->metaKeywords)) {
             echo Tags::$newline;
             echo Tags::$openAngle
-                . Tags::$meta . ' '
-                . Tags::$name . '="keywords" ' . Tags::$content . '="' . $this::getMetaKeywords() . '"'
-                . Tags::$closeAngle;
+                .Tags::$meta.' '
+                .Tags::$name.'="keywords" '.Tags::$content.'="'.$this::getMetaKeywords().'"'
+                .Tags::$closeAngle;
         }
         if (!empty($this->metaAuthor)) {
             echo Tags::$newline;
             echo Tags::$openAngle
-                . Tags::$meta . ' '
-                . Tags::$name . '="author" ' . Tags::$content . '="' . $this::getMetaAuthor() . '"'
-                . Tags::$closeAngle;
+                .Tags::$meta.' '
+                .Tags::$name.'="author" '.Tags::$content.'="'.$this::getMetaAuthor().'"'
+                .Tags::$closeAngle;
         }
         echo Tags::$newline;
-        $head->End();
+        $head->end();
     }
 
     /**
-     *Close Html document tag
+     *Close Html document tag.
      */
-    public static function End()
+    public static function end()
     {
         echo Tags::$newline;
-        echo Tags::$openSlash . Tags::$html . Tags::$closeAngle;
+        echo Tags::$openSlash.Tags::$html.Tags::$closeAngle;
     }
-
 }
